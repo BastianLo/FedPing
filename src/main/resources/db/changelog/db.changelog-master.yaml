@@ -1,0 +1,23 @@
+databaseChangeLog:
+  -  changeSet:
+       id:  000-initial-database-setup
+       author:  BastianLo
+       changes:
+         -  createTable:
+              tableName:  observer
+              columns:
+                -  column:
+                     name:  id
+                     type:  uuid
+                     constraints:
+                       primaryKey: true
+                       nullable: false
+                -  column:
+                     name:  Name
+                     type:  varchar(255)
+                -  column:
+                     name:  Description
+                     type:  varchar(255)
+                -  column:
+                     name:  Hostname
+                     type:  varchar(255)
